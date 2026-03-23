@@ -48,11 +48,11 @@ public class ApiThread extends Thread {
 
             JSONObject jsonObject = new JSONObject(response.toString());
 
-            String qoute = jsonObject.getString("quote");
+            String quote = jsonObject.getString("quote");
             String author = jsonObject.getString("author");
 
             String result =
-                    "Quote: " + qoute + "\n" +
+                    "Quote: " + quote + "\n" +
                     "Author: " + author;
 
             activity.runOnUiThread(() -> {
